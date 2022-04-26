@@ -1,0 +1,10 @@
+Package: epitopeAnalysis
+Title: Analyzes common elements in strings found in different txt files. 
+Version: 0.0.0.9000
+Author: Irene Arias Gutierrez 
+Maintainer: Irene Arias Gutierrez <iariasgutierrez@usf.edu>
+Description: The package looks at different txt files containing strings of amino acids and selects the strings that are present in all of the files. This is particularly useful when predicting T, B, MHCI, MHCII epitopes using online tools.
+License: CC0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
