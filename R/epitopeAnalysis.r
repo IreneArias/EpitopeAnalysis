@@ -4,10 +4,11 @@
 #' @export
 #'
 #' @examples "YTMSLGAEN"
+#' @examples "MSLGAENSVA"
+#' @examples "TMSLGAENSVAY"
 epitope_Analysis <- function() {
-  args <- commandArgs(trailingOnly = TRUE)
   path <- getwd()
-  data_path <- paste(path,args[1],sep = "/")
+  data_path <- paste(path,sep = "/")
   files <- Sys.glob(file.path(data_path, "*.txt"))
   `%nin%` = Negate(`%in%`)
 
@@ -51,6 +52,7 @@ epitope_Analysis <- function() {
 
   all_seq = unlist(list_,use.names = FALSE)
 
+  freq_x <- sort(table(unlist(strsplit(all_seq, ""))))
 
   for (seq in all_seq){
     size = nchar(seq)
@@ -69,17 +71,24 @@ epitope_Analysis <- function() {
 
   all <- all_possibilities(all_seq,smallest,largest)
   print(length(all))
+  number_of_files <- length(files)
+  sprintf("The number of files found are: %s", number_of_files)
 
+  for (seq in all){
+    result <- list()
+    for (sub_list in list_){
+      tmp <- present_in_epitope(seq,sub_list)
+      if (tmp == 1){
+        result <- append(result,tmp)
+      }
+    }
+    if (length(result) == number_of_files){
+      sort.list(seq, na.last=TRUE)
+      print(seq)
+    }
+  }
 }
 
-#' Allows you to sort your results based on the size of the strings
-#'
-#' @return
-#' @export
-#'
-#' @examples "A"
-#' @examples "ABCD"
-#' @examples "ABCDEF"
-results_by_size <- function () {
-  RbS <- transform(all_possibilities, n=nchar(as.character()))
-}
+
+
+

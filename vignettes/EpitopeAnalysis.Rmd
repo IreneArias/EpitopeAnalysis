@@ -1,0 +1,19 @@
+---
+title: "Explaining Epitope Analysis Package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Explaining Epitope Analysis Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(epitopeAnalysis)
+```
