@@ -16,4 +16,40 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(epitopeAnalysis)
+
 ```
+
+##### epitope_Analysis: Main Function 
+
+The function epitope_Analysis is the main function of the package and the only one the user has access to use at the moment. This function determines the common strings or epitopes found in the .txt files. The function wraps up a series of other functions and for loops that will be explained in further detail. For now, if we only focus on the function that the user has access to, this should be the output from epitope_Analysis if you are using the data set provided:
+
+
+![epitope_Analysis generates the following output:](/Users/irenearias/Desktop/epitope_AnalysisOutput.png){width=100px}
+
+Now let's talk about how this is possible
+
+
+###### Explaning all possibilities function 
+First, the whole function is a process. We first start by using another function called all_possibilities. 
+
+Here is how all_possibilities function looks like: 
+
+![code for all_possibilities function](/Users/irenearias/Desktop/all_possibilities.png){width=250px}
+
+
+all_possibilities reads all the files that are in txt format and determines the largest and the smallest size of characters and makes a list out of them. Notice that there are 3 nested for loops one is for adding the elements to the list and the other ones are for size determination 
+
+###### Explaining present in epitope function 
+
+present_in_epitope is the last of the three functions that belong to the package. In this function, we make sure that the sequences are present in a file. The important thing to notice is the way in which it is checking the sequence. This function looks for a sequency in any subset of the sequences, which makes it quite unique.  
+
+Here is how present_in_epitope function looks like: 
+
+![code for present_in_epitope function](/Users/irenearias/Desktop/present_in_epitope.png){width=250px}
+
+<br>
+<br>
+
+The rest of the code is composed of several for loops and if statements.
+
+Please keep in mind that this code will most likely be modified in the future. 
