@@ -1,3 +1,10 @@
+**Author** Irene Arias Gutierrez 
+
+**Email** iariasgutierrez@usf.edu 
+
+### Abstract Description 
+This package determines common strings (epitopes) found in different txt files which have been determined through online epitope prediction tools. This is particularly useful when dealing with big txt files or a large amount of txt files that you want to find common strings between them.  
+
 ### Motivation for the Package 
 Right now I am working on a research project determining common epitopes ("chunks" of an amino acid sequence that bind to an antigen) between different online epitope prediction tools. There are a various number of tools that predict B, T, MHCI and MHCII epitopes, which is fantastic! Ideally, the best epitope binds to all of these, which is why my package looks towards all the txt files located in a directory and recognizes the common sequences in all the txt files. There is no limit for the amount of txt files located in the directory.\
 
@@ -10,8 +17,7 @@ The package consists of a total of 3 functions and it includes several for loops
  
 
 
-### Epitope Analysis
-Determines common strings (epitopes) found in different txt files which have been determined through online epitope prediction tools 
+
 
 ### Downloading the package 
 There are many ways to download and use a package or repository from GitHub, but this is the one that I like to use: 
@@ -21,7 +27,7 @@ There are many ways to download and use a package or repository from GitHub, but
   + Install_github("IreneArias/EpitopeAnalysis")
   + library(epitopeAnalysis)
   
-##### BEFORE USING THE PACKAGE MAKE SURE YOU DO THE FOLLOWING: 
+##### **BEFORE USING THE PACKAGE MAKE SURE YOU DO THE FOLLOWING:** 
 * Set your working directory to the data folder. You can do this by going into the top toolbar in R:
    + Session --> Set Working Directory --> Choose Directory 
 * Choose the data directory which you downloaded from this repository. 
