@@ -6,14 +6,16 @@
 This package determines common strings (epitopes) found in different txt files which have been determined through online epitope prediction tools. This is particularly useful when dealing with big txt files or a large amount of txt files that you want to find common strings between them.  
 
 ### Motivation for the Package 
-Right now I am working on a research project determining common epitopes ("chunks" of an amino acid sequence that bind to an antigen) between different online epitope prediction tools. There are a various number of tools that predict B, T, MHCI and MHCII epitopes, which is fantastic! Ideally, the best epitope binds to all of these, which is why my package looks towards all the txt files located in a directory and recognizes the common sequences in all the txt files. There is no limit for the amount of txt files located in the directory.\
+Right now I am working on a research project determining common epitopes ("chunks" of an amino acid sequence that bind to an antigen) between different online epitope prediction tools. There are a various number of tools that predict B, T, MHCI and MHCII epitopes, which is fantastic! Ideally, the best epitope binds to all of these, which is why my package looks towards all the txt files located in a directory and recognizes the common sequences in all the txt files. There is no limit for the amount of txt files located in the directory.
 
-I find this extremely helpful and useful in my current research. I hope someone else can find this package useful as well. \
+I find this extremely helpful and useful in my current research. I hope someone else can find this package useful as well. 
 
 Please keep in mind that even though the main idea of the package is for epitope prediction, it can be used to determine any type of common strings in txt files. 
 
 ### Functions 
 The package consists of a total of 3 functions and it includes several for loops. Even though the user only interacts with one function and the moment, all the function will be further explained in the "vignettes" directory 
+
+The file located in the vignettes directory is an .Rmd (R markdown file). GitHub does not render R markdown files, which is why it would be easier to read the file in R Studio once you download the package. 
  
 
 
